@@ -10,10 +10,10 @@ import projectCVBuilder from '../assets/images/cv-builder.png';
 // import projectUnityGame from '../assets/images/project-unity-game.png';
 // import projectBlender from '../assets/images/project-blender.png';
 
-// Placeholder images - replace with imported images when available
-const projectPortfolio = '/assets/images/project-portfolio.png';
-const projectPlanetAR = '/assets/images/project-planet-ar.png';
-const projectBlender = '/assets/images/project-blender.png';
+// Placeholder images - using external placeholders until actual images are available
+const projectPortfolio = 'https://placehold.co/800x600/1a1a2e/16213e?text=Portfolio+Website';
+const projectPlanetAR = 'https://placehold.co/800x600/1a1a2e/16213e?text=Planet+AR';
+const projectBlender = 'https://placehold.co/800x600/1a1a2e/16213e?text=Blender+3D';
 
 export const portfolioData: PortfolioData = {
     profile: {
