@@ -93,7 +93,10 @@ export default function Projects({ projects }: ProjectsProps) {
 
                     {/* Projects Grid with Animation */}
                     <div className="overflow-hidden px-8 md:px-12 lg:px-16">
-                        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8 transition-all duration-500 ease-in-out">
+                        <div className={`grid gap-3 md:gap-6 lg:gap-8 transition-all duration-500 ease-in-out ${visibleProjects.length === 1
+                                ? 'grid-cols-1 max-w-md mx-auto'
+                                : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3'
+                            }`}>
                             {visibleProjects.map((project) => (
                                 <div
                                     key={project.id}
