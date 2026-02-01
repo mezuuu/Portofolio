@@ -11,7 +11,6 @@ import projectCVBuilder from '../assets/images/cv-builder.png';
 // import projectBlender from '../assets/images/project-blender.png';
 
 // Placeholder images - replace with imported images when available
-const projectDjangoAPI = '/assets/images/project-django-api.png';
 const projectPortfolio = '/assets/images/project-portfolio.png';
 const projectPlanetAR = '/assets/images/project-planet-ar.png';
 const projectBlender = '/assets/images/project-blender.png';
