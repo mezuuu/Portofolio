@@ -6,12 +6,11 @@ import profileImg from '../assets/images/profile.png';
 import projectCVBuilder from '../assets/images/cv-builder.png';
 // import projectDjangoAPI from '../assets/images/project-django-api.png';
 // import projectCVBuilder from '../assets/images/project-cv-builder.png';
-// import projectPortfolio from '../assets/images/project-portfolio.png';
+import projectPortfolio from '../assets/images/porto.png';
 // import projectUnityGame from '../assets/images/project-unity-game.png';
 // import projectBlender from '../assets/images/project-blender.png';
 
 // Placeholder images - using external placeholders until actual images are available
-const projectPortfolio = 'https://placehold.co/800x600/1a1a2e/16213e?text=Portfolio+Website';
 const projectPlanetAR = 'https://placehold.co/800x600/1a1a2e/16213e?text=Planet+AR';
 const projectBlender = 'https://placehold.co/800x600/1a1a2e/16213e?text=Blender+3D';
 
@@ -20,7 +19,7 @@ export const portfolioData: PortfolioData = {
         id: '1',
         fullName: 'Muhammad Akbar Velayati',
         brandName: 'MezuuDev',
-        headline: 'Junior Full Stack eveloper',
+        headline: 'Junior Full Stack Developer',
         bio: 'Informatics Engineering student at Universitas Muhammadiyah Surakarta, focused on problem-solving and software development. Enthusiastic programmer with a strong passion for web application and game development. Experienced in building full-stack web solutions using ReactJS and Django REST Framework, while actively exploring interactive media through Unity and Blender.',
         location: 'Surakarta, Central Java',
         avatarUrl: profileImg,
@@ -110,7 +109,7 @@ export const portfolioData: PortfolioData = {
             updatedAt: new Date('2024-03-15'),
             tags: ['Portfolio', 'UI/UX'],
             links: [
-                { id: '4', projectId: '4', type: 'repo', label: 'GitHub', url: 'https://github.com/akbarvelayati/portfolio' },
+                { id: '4', projectId: '4', type: 'repo', label: 'GitHub', url: 'https://github.com/mezuuu/Porto.git' },
             ],
             techStack: [
                 { id: '6', name: 'React', type: 'frontend' },

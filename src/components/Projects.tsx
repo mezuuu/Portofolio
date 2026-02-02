@@ -7,26 +7,34 @@ interface ProjectsProps {
 
 export default function Projects({ projects }: ProjectsProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isMobile, setIsMobile] = useState(false);
+    const [screenSize, setScreenSize] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
 
-    // Check if mobile view
+    // Check screen size for responsive layout
     useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
+        const checkScreenSize = () => {
+            const width = window.innerWidth;
+            if (width < 768) {
+                setScreenSize('mobile');
+            } else if (width < 1024) {
+                setScreenSize('tablet');
+            } else {
+                setScreenSize('desktop');
+            }
         };
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+        return () => window.removeEventListener('resize', checkScreenSize);
     }, []);
 
-    // 2 projects on mobile, 3 on desktop
-    const projectsPerPage = isMobile ? 2 : 3;
+    // 2 projects on mobile/tablet, 3 on desktop (lg+)
+    const projectsPerPage = screenSize === 'desktop' ? 3 : 2;
+    const isMobile = screenSize === 'mobile';
     const totalPages = Math.ceil(projects.length / projectsPerPage);
 
-    // Reset index when switching between mobile/desktop
+    // Reset index when switching between screen sizes
     useEffect(() => {
         setCurrentIndex(0);
-    }, [isMobile]);
+    }, [screenSize]);
 
     const getRepoUrl = (project: Project): string | null => {
         const repoLink = project.links.find(link => link.type === 'repo');
@@ -94,8 +102,8 @@ export default function Projects({ projects }: ProjectsProps) {
                     {/* Projects Grid with Animation */}
                     <div className="overflow-hidden px-8 md:px-12 lg:px-16">
                         <div className={`grid gap-3 md:gap-6 lg:gap-8 transition-all duration-500 ease-in-out ${visibleProjects.length === 1
-                                ? 'grid-cols-1 max-w-md mx-auto'
-                                : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3'
+                            ? 'grid-cols-1 max-w-md mx-auto'
+                            : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3'
                             }`}>
                             {visibleProjects.map((project) => (
                                 <div
