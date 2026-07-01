@@ -110,7 +110,7 @@ export default function Projects({ projects }: ProjectsProps) {
                     <div className="overflow-hidden px-8 md:px-12 lg:px-16">
                         <div className={`grid gap-3 md:gap-6 lg:gap-8 transition-all duration-500 ease-in-out ${visibleProjects.length === 1
                             ? 'grid-cols-1 max-w-md mx-auto'
-                            : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+                            : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3'
                             }`}>
                             {visibleProjects.map((project) => (
                                 <div
@@ -146,13 +146,13 @@ export default function Projects({ projects }: ProjectsProps) {
                                             </div>
                                         )}
                                     </div>
- 
+
                                     {/* Project Info */}
                                     <div className="p-3 md:p-6">
                                         <h3 className="text-sm md:text-xl font-bold text-white mb-1 md:mb-2 group-hover:text-neon-cyan transition-colors line-clamp-1">
                                             {project.title}
                                         </h3>
-                                        <p className="text-text-muted text-xs md:text-sm mb-2 md:mb-4 line-clamp-2">
+                                        <p className="text-text-muted text-xs md:text-sm mb-2 md:mb-4 line-clamp-2 hidden md:block">
                                             {project.description}
                                         </p>
 
