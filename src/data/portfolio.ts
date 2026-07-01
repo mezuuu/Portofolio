@@ -9,6 +9,7 @@ import projectCVBuilder from '../assets/images/cv-builder.png';
 import projectPortfolio from '../assets/images/porto.png';
 import projectDoksli from '../assets/images/Doksli.png';
 import projectKaranganyarKab from '../assets/images/karanganyarKab.png';
+import projectAetheris from '../assets/images/Aetheris.jpeg';
 // import projectUnityGame from '../assets/images/project-unity-game.png';
 // import projectBlender from '../assets/images/project-blender.png';
 
@@ -170,7 +171,7 @@ export const portfolioData: PortfolioData = {
             title: 'Aetheris Audio Player',
             slug: 'aetheris',
             description: 'An advanced, modern, and integrated music player built using Flutter. It integrates high-resolution local audio playback with cloud-based metadata streaming, matching official Spotify metadata with local lossless files, self-hosted lossless backends, or YouTube Music streams.',
-            thumbnail: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800',
+            thumbnail: projectAetheris,
             isFeatured: false,
             createdAt: new Date('2026-06-01'),
             updatedAt: new Date('2026-06-15'),
