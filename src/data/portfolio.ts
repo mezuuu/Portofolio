@@ -7,12 +7,13 @@ import projectCVBuilder from '../assets/images/cv-builder.png';
 // import projectDjangoAPI from '../assets/images/project-django-api.png';
 // import projectCVBuilder from '../assets/images/project-cv-builder.png';
 import projectPortfolio from '../assets/images/porto.png';
+import projectDoksli from '../assets/images/Doksli.png';
+import projectKaranganyarKab from '../assets/images/karanganyarKab.png';
 // import projectUnityGame from '../assets/images/project-unity-game.png';
 // import projectBlender from '../assets/images/project-blender.png';
 
 // Placeholder images - using external placeholders until actual images are available
-const projectPlanetAR = 'https://placehold.co/800x600/1a1a2e/16213e?text=Planet+AR';
-const projectBlender = 'https://placehold.co/800x600/1a1a2e/16213e?text=Blender+3D';
+//const projectKaranganyarKab = 'https://placehold.co/800x600/1a1a2e/16213e?text=Planet+AR';
 
 export const portfolioData: PortfolioData = {
     profile: {
@@ -20,7 +21,7 @@ export const portfolioData: PortfolioData = {
         fullName: 'Muhammad Akbar Velayati',
         brandName: 'MezuuDev',
         headline: 'Junior Full Stack Developer',
-        bio: 'Informatics Engineering student at Universitas Muhammadiyah Surakarta, focused on problem-solving and software development. Enthusiastic programmer with a strong passion for web application and game development. Experienced in building full-stack web solutions using ReactJS and Django REST Framework, while actively exploring interactive media through Unity and Blender.',
+        bio: 'Informatics Engineering student at Universitas Muhammadiyah Surakarta, focused on problem-solving and software development. Enthusiastic programmer with a strong passion for web application, mobile app, and game development. Experienced in building full-stack web and mobile solutions using ReactJS, Django REST Framework, Laravel, PHP, MySQL, and Flutter, while actively exploring interactive media through Unity and Blender.',
         location: 'Surakarta, Central Java',
         avatarUrl: profileImg,
         cvUrl: '/cv.pdf',
@@ -36,6 +37,10 @@ export const portfolioData: PortfolioData = {
         // Back-End Skills
         { id: '4', name: 'Django REST', level: 70, category: 'Back-End' },
         { id: '5', name: 'Python', level: 75, category: 'Back-End' },
+        { id: '9', name: 'PHP', level: 75, category: 'Back-End' },
+        { id: '10', name: 'Laravel', level: 70, category: 'Back-End' },
+        // Mobile Development
+        { id: '11', name: 'Flutter', level: 60, category: 'Mobile Dev' },
         // Database
         { id: '6', name: 'MySQL', level: 70, category: 'Database' },
         // Game Development
@@ -84,7 +89,7 @@ export const portfolioData: PortfolioData = {
             slug: 'cv-builder',
             description: 'A specialized CV builder application and talent platform designed to showcase student portfolios. Features include dynamic and responsive user interfaces, CRUD functionalities for student profiles, skills, and work experiences.',
             thumbnail: projectCVBuilder,
-            isFeatured: true,
+            isFeatured: false,
             createdAt: new Date('2024-01-15'),
             updatedAt: new Date('2024-01-15'),
             tags: ['Web App', 'Full Stack', 'CV Builder'],
@@ -105,7 +110,7 @@ export const portfolioData: PortfolioData = {
             description: 'Modern portfolio website with dark neon theme built using Next.js and Tailwind CSS, featuring responsive design and stunning animations.',
             thumbnail: projectPortfolio,
             isFeatured: false,
-            createdAt: new Date('2024-03-15'),
+            createdAt: new Date('2024-01-01'),
             updatedAt: new Date('2024-03-15'),
             tags: ['Portfolio', 'UI/UX'],
             links: [
@@ -119,38 +124,64 @@ export const portfolioData: PortfolioData = {
         {
             id: '3',
             profileId: '1',
-            title: 'Planet AR Project',
-            slug: 'planet-ar',
-            description: 'Interactive game development project using Unity Engine with C# scripting, featuring 3D assets created in Blender.',
-            thumbnail: projectPlanetAR,
-            isFeatured: false,
-            createdAt: new Date('2024-04-01'),
-            updatedAt: new Date('2024-04-01'),
-            tags: ['AR', '3D Modeling'],
+            title: 'Image Manipulation Detection System',
+            slug: 'sistem-deteksi-manipulasi-gambar',
+            description: 'An image manipulation detection system using Error Level Analysis and Deep Learning (CNN). This project aims to identify manipulations in digital images.',
+            thumbnail: projectDoksli,
+            isFeatured: true,
+            createdAt: new Date('2026-01-29'),
+            updatedAt: new Date('Present'),
+            tags: ['AI', 'Machine Learning'],
             links: [
-                { id: '5', projectId: '5', type: 'repo', label: 'GitHub', url: 'https://github.com/akbarvelayati/unity-game' },
+                { id: '5', projectId: '5', type: 'repo', label: 'GitHub', url: 'https://github.com/mezuuu/Aplikasi-Pencari-Doksli.git' },
             ],
             techStack: [
-                { id: '7', name: 'Unity', type: 'tools' },
-                { id: '8', name: 'C#', type: 'backend' },
+                { id: '7', name: 'TensorFlow', type: 'tools' },
+                { id: '8', name: 'Google Cloud API', type: 'backend' },
+                { id: '9', name: 'Scikit-Learn', type: 'backend' },
+                { id: '10', name: 'Pytorch', type: 'backend' },
             ],
         },
         {
             id: '4',
             profileId: '1',
-            title: 'Blender 3D Animation',
-            slug: 'blender-animation',
-            description: '3D Animation projects using Blender for game development and interactive media.',
-            thumbnail: projectBlender,
+            title: 'Karanganyar Regency Government Website',
+            slug: 'karanganyarkab',
+            description: 'The Karanganyar Regency Government Website used to inform government news and activities.',
+            thumbnail: projectKaranganyarKab,
             isFeatured: false,
-            createdAt: new Date('2024-04-15'),
-            updatedAt: new Date('2024-04-15'),
-            tags: ['3D Art', 'Animation'],
+            createdAt: new Date('2026-04-09'),
+            updatedAt: new Date('2026-05-26'),
+            tags: ['Web App', 'Laravel'],
             links: [
-                { id: '6', projectId: '6', type: 'repo', label: 'GitHub', url: 'https://github.com/akbarvelayati/blender-assets' },
+                { id: '6', projectId: '4', type: 'repo', label: 'GitHub', url: 'https://pemerintah-kabupaten-karanganyar-main-ggceev.free.laravel.cloud/' },
             ],
             techStack: [
-                { id: '9', name: 'Blender', type: 'tools' },
+                { id: '9', name: 'PHP', type: 'backend' },
+                { id: '10', name: 'Laravel', type: 'backend' },
+                { id: '11', name: 'MySQL', type: 'database' },
+                { id: '12', name: 'Bootstrap', type: 'frontend' },
+                { id: '13', name: 'PostgreSQL', type: 'database' },
+            ],
+        },
+        {
+            id: '5',
+            profileId: '1',
+            title: 'Aetheris Audio Player',
+            slug: 'aetheris',
+            description: 'An advanced, modern, and integrated music player built using Flutter. It integrates high-resolution local audio playback with cloud-based metadata streaming, matching official Spotify metadata with local lossless files, self-hosted lossless backends, or YouTube Music streams.',
+            thumbnail: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800',
+            isFeatured: false,
+            createdAt: new Date('2026-06-01'),
+            updatedAt: new Date('2026-06-15'),
+            tags: ['Mobile App', 'Flutter', 'Audio Player'],
+            links: [
+                { id: '7', projectId: '5', type: 'repo', label: 'GitHub', url: 'https://github.com/mezuuu/Aetheris.git' },
+            ],
+            techStack: [
+                { id: '14', name: 'Flutter', type: 'frontend' },
+                { id: '15', name: 'Dart', type: 'frontend' },
+                { id: '16', name: 'Spotify API', type: 'backend' },
             ],
         },
     ],

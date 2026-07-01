@@ -5,6 +5,7 @@ interface EducationProps {
 }
 
 export default function Education({ education }: EducationProps) {
+
     const handleEducationClick = (edu: EducationType) => {
         if (edu.locationUrl) {
             window.open(edu.locationUrl, '_blank', 'noopener,noreferrer');
@@ -13,11 +14,15 @@ export default function Education({ education }: EducationProps) {
 
     return (
         <section id="education" className="py-12 md:py-20 px-4 bg-dark-card/30">
-            <div className="max-w-7xl mx-auto">
+            <div className="w-[92%] max-w-[1536px] mx-auto">
                 {/* Section Title */}
                 <div className="text-center mb-8 md:mb-16">
-                    <p className="text-neon-cyan text-xs md:text-sm uppercase tracking-widest mb-2">My Journey</p>
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text">Education</h2>
+                    <p className="text-neon-cyan text-xs md:text-sm uppercase tracking-widest mb-2">
+                        My Journey
+                    </p>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text">
+                        Education
+                    </h2>
                     <p className="text-text-muted text-sm md:text-base mt-3 md:mt-4 max-w-2xl mx-auto px-4">
                         Tap on any card to view location on Google Maps
                     </p>

@@ -12,11 +12,11 @@ import {
 } from './components';
 import { portfolioData } from './data/portfolio';
 
-function App() {
+function AppContent() {
   const { profile, skills, projects, education, contacts, techStack } = portfolioData;
 
   return (
-    <div className="min-h-screen bg-dark-bg">
+    <div className="min-h-screen">
       <Navbar />
       <main>
         <Hero profile={profile} contacts={contacts} />
@@ -29,6 +29,12 @@ function App() {
       </main>
       <Footer contacts={contacts} />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <AppContent />
   );
 }
 

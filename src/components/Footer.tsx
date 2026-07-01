@@ -1,4 +1,5 @@
 import type { Contact } from '../types';
+import logoImg from '../assets/images/logo.png';
 
 interface FooterProps {
     contacts: Contact[];
@@ -47,57 +48,33 @@ export default function Footer({ contacts }: FooterProps) {
     };
 
     return (
-        <footer className="bg-dark-card/50 border-t border-dark-border py-12 px-4">
-            <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                    {/* Logo & Copyright */}
-                    <div className="text-center md:text-left">
-                        <a href="/" className="flex items-center justify-center md:justify-start space-x-2 mb-4">
-                            <div className="w-10 h-10 bg-gradient-to-br from-neon-cyan to-neon-purple rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">M</span>
-                            </div>
-                            <span className="text-xl font-bold gradient-text">MezuuDev</span>
-                        </a>
-                        <p className="text-text-muted text-sm">
-                            © {currentYear} All rights reserved.
-                        </p>
-                    </div>
-
-                    {/* Navigation Links */}
-                    <nav className="flex flex-wrap justify-center gap-6">
-                        {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
-                            <a
-                                key={item}
-                                href={`#${item.toLowerCase()}`}
-                                className="text-text-secondary hover:text-neon-cyan transition-colors text-sm"
-                            >
-                                {item}
-                            </a>
-                        ))}
-                    </nav>
-
-                    {/* Social Icons */}
-                    <div className="flex items-center space-x-4">
-                        {contacts.map((contact) => (
-                            <a
-                                key={contact.id}
-                                href={getContactUrl(contact)}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-lg bg-dark-bg border border-dark-border flex items-center justify-center text-text-secondary hover:text-neon-cyan hover:border-neon-cyan transition-all duration-300"
-                                title={contact.label}
-                            >
-                                {socialIcons[contact.platform]}
-                            </a>
-                        ))}
-                    </div>
+        <footer className="bg-dark-card/50 border-t border-dark-border py-4 md:py-6 px-4">
+            <div className="w-[92%] max-w-[1536px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+                {/* Logo & Copyright */}
+                <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                    <a href="/" className="flex items-center space-x-2">
+                        <img src={logoImg} alt="MezuuDev Logo" className="h-8 md:h-10 w-auto object-contain" />
+                        <span className="text-lg font-bold text-text-primary">MezuuDev</span>
+                    </a>
+                    <p className="text-text-muted text-sm text-center md:text-left">
+                        © {currentYear} MezuuDev. All rights reserved.
+                    </p>
                 </div>
 
-                {/* Bottom Text */}
-                <div className="mt-8 pt-8 border-t border-dark-border text-center">
-                    <p className="text-text-muted text-sm">
-                        Designed & Built by <span className="text-neon-cyan">MezuuDev</span> using Vite + React & Tailwind CSS
-                    </p>
+                {/* Social Icons */}
+                <div className="flex items-center space-x-3">
+                    {contacts.map((contact) => (
+                        <a
+                            key={contact.id}
+                            href={getContactUrl(contact)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-dark-bg border border-dark-border flex items-center justify-center text-text-secondary hover:text-neon-cyan hover:border-neon-cyan transition-all duration-300"
+                            title={contact.label}
+                        >
+                            {socialIcons[contact.platform]}
+                        </a>
+                    ))}
                 </div>
             </div>
         </footer>

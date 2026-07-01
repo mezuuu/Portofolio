@@ -47,7 +47,7 @@ export default function Contact({ contacts }: ContactProps) {
             setTimeout(() => setSubmitted(false), 5000);
         } catch (err) {
             console.error('EmailJS Error:', err);
-            setError('Gagal mengirim pesan. Silakan coba lagi atau hubungi langsung via email.');
+            setError('Failed to send message. Please try again or contact via email.');
         } finally {
             setIsSubmitting(false);
         }
@@ -64,11 +64,15 @@ export default function Contact({ contacts }: ContactProps) {
 
     return (
         <section id="contact" className="py-12 md:py-20 px-4">
-            <div className="max-w-7xl mx-auto">
+            <div className="w-[92%] max-w-[1536px] mx-auto">
                 {/* Section Title */}
                 <div className="text-center mb-8 md:mb-16">
-                    <p className="text-neon-cyan text-xs md:text-sm uppercase tracking-widest mb-2">Get In Touch</p>
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text">Contact Me</h2>
+                    <p className="text-neon-cyan text-xs md:text-sm uppercase tracking-widest mb-2">
+                        Get In Touch
+                    </p>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text">
+                        Contact Me
+                    </h2>
                     <p className="text-text-muted text-sm md:text-base mt-3 md:mt-4 max-w-2xl mx-auto px-4">
                         Have a project in mind? Feel free to reach out!
                     </p>
@@ -77,9 +81,11 @@ export default function Contact({ contacts }: ContactProps) {
                 <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-lg md:text-2xl font-bold text-white mb-4 md:mb-6">Let&apos;s talk about your project</h3>
+                        <h3 className="text-lg md:text-2xl font-bold text-white mb-4 md:mb-6">
+                            Let's talk about your project
+                        </h3>
                         <p className="text-text-secondary text-sm md:text-base mb-6 md:mb-8 leading-relaxed hidden md:block">
-                            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
                         </p>
 
                         {/* Contact Cards */}
@@ -126,7 +132,7 @@ export default function Contact({ contacts }: ContactProps) {
                                     </svg>
                                 </div>
                                 <h3 className="text-lg md:text-xl font-bold text-white mb-2">Message Sent!</h3>
-                                <p className="text-text-muted text-sm md:text-base">Thank you! I&apos;ll get back to you soon.</p>
+                                <p className="text-text-muted text-sm md:text-base">Thank you! I'll get back to you soon.</p>
                             </div>
                         ) : (
                             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 md:space-y-6">

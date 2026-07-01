@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark Neon Theme Colors */
-  --neon-cyan: #00F3FF;
-  --neon-purple: #BD00FF;
-  --neon-pink: #FF006E;
-  --neon-green: #39FF14;
-  --neon-blue: #0066FF;
+  /* Cream Theme Colors */
+  --neon-cyan: #C68A5D;
+  /* Light Brown */
+  --neon-purple: #8C5A3B;
+  /* Medium Brown */
+  --neon-pink: #D49A6A;
+  --neon-green: #C68A5D;
+  --neon-blue: #4A2E2A;
 
   /* Background Colors */
-  --dark-bg: #0D0D0D;
-  --dark-card: #1A1A1A;
-  --dark-border: #2A2A2A;
-  --dark-hover: #252525;
+  --dark-bg: #FCF9F2;
+  /* Cream */
+  --dark-card: #FFFFFF;
+  /* White */
+  --dark-border: #E8E3DA;
+  --dark-hover: #F5F1E9;
 
   /* Text Colors */
-  --text-primary: #FFFFFF;
-  --text-secondary: #A0A0A0;
-  --text-muted: #666666;
+  --text-primary: #4A2E2A;
+  /* Dark Brown */
+  --text-secondary: #65443B; /* Darker Medium Brown */
+  --text-muted: #82665B; /* Darker Muted Brown */
 
-  --background: #0D0D0D;
-  --foreground: #FFFFFF;
+  --background: #FCF9F2;
+  --foreground: #4A2E2A;
 }
 
 @theme inline {
@@ -45,12 +50,23 @@
   box-sizing: border-box;
 }
 
+@layer utilities {
+  .text-white {
+    color: var(--text-primary) !important;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--dark-bg);
+  background-color: var(--dark-bg);
+  background-image: url("https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=2000");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text-primary);
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.6;
@@ -58,25 +74,21 @@ body {
   padding: 0;
 }
 
-/* Neon Glow Utilities */
+/* Soft Glow Utilities for Light Theme */
 .neon-glow-cyan {
-  box-shadow: 0 0 20px rgba(0, 243, 255, 0.4),
-    0 0 40px rgba(0, 243, 255, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(198, 138, 93, 0.3);
 }
 
 .neon-glow-purple {
-  box-shadow: 0 0 20px rgba(189, 0, 255, 0.4),
-    0 0 40px rgba(189, 0, 255, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(140, 90, 59, 0.3);
 }
 
 .neon-text-cyan {
-  text-shadow: 0 0 10px rgba(0, 243, 255, 0.8),
-    0 0 20px rgba(0, 243, 255, 0.5);
+  text-shadow: 1px 1px 2px rgba(198, 138, 93, 0.2);
 }
 
 .neon-text-purple {
-  text-shadow: 0 0 10px rgba(189, 0, 255, 0.8),
-    0 0 20px rgba(189, 0, 255, 0.5);
+  text-shadow: 1px 1px 2px rgba(140, 90, 59, 0.2);
 }
 
 /* Gradient Text */
@@ -94,7 +106,7 @@ body {
 
 .card-hover:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+  box-shadow: 0 15px 35px -10px rgba(140, 90, 59, 0.15);
   border-color: var(--neon-cyan);
 }
 

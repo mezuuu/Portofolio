@@ -34,6 +34,7 @@ const socialIcons: Record<string, React.ReactNode> = {
 };
 
 export default function Hero({ profile, contacts }: HeroProps) {
+
     const getContactUrl = (contact: Contact): string => {
         switch (contact.platform) {
             case 'email':
@@ -46,13 +47,13 @@ export default function Hero({ profile, contacts }: HeroProps) {
     };
 
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4">
-            <div className="max-w-7xl mx-auto">
+        <section id="home" className="min-h-screen flex items-center justify-center pt-24 md:pt-32 pb-12 px-4">
+            <div className="w-[92%] max-w-[1536px] mx-auto">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left Side - Text Content */}
                     <div className="order-2 md:order-1 text-center md:text-left">
                         <p className="text-neon-cyan text-sm uppercase tracking-widest mb-4 neon-text-cyan">
-                            Hello, I'm
+                            Hi, I am
                         </p>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
                             <span className="gradient-text">{profile.fullName}</span>
@@ -86,7 +87,7 @@ export default function Hero({ profile, contacts }: HeroProps) {
                                 href="#projects"
                                 className="px-8 py-3 rounded-lg bg-gradient-to-r from-neon-cyan to-neon-purple text-dark-bg font-semibold hover:opacity-90 transition-opacity duration-300 neon-glow-cyan"
                             >
-                                View My Work
+                                View Projects
                             </a>
                             <a
                                 href="#contact"
@@ -105,7 +106,7 @@ export default function Hero({ profile, contacts }: HeroProps) {
                                 <div className="w-full h-full rounded-full bg-dark-bg"></div>
                             </div>
                             {/* Profile Image */}
-                            <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-br from-neon-cyan to-neon-purple p-1">
+                            <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[480px] lg:h-[480px] xl:w-[520px] xl:h-[520px] rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-br from-neon-cyan to-neon-purple p-1">
                                 <div className="w-full h-full rounded-full overflow-hidden bg-dark-card">
                                     <img
                                         src={profile.avatarUrl || 'https://picsum.photos/seed/avatar/400/400'}
@@ -124,7 +125,6 @@ export default function Hero({ profile, contacts }: HeroProps) {
                 {/* Scroll Indicator */}
                 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block">
                     <a href="#about" className="flex flex-col items-center text-text-muted hover:text-neon-cyan transition-colors">
-                        <span className="text-xs uppercase tracking-widest mb-2">Scroll Down</span>
                         <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                         </svg>
