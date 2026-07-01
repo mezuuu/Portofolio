@@ -21,7 +21,7 @@ export const portfolioData: PortfolioData = {
         id: '1',
         fullName: 'Muhammad Akbar Velayati',
         brandName: 'MezuuDev',
-        headline: 'Junior Full Stack Developer',
+        headline: 'Full Stack Developer',
         bio: 'Informatics Engineering student at Universitas Muhammadiyah Surakarta, focused on problem-solving and software development. Enthusiastic programmer with a strong passion for web application, mobile app, and game development. Experienced in building full-stack web and mobile solutions using ReactJS, Django REST Framework, Laravel, PHP, MySQL, and Flutter, while actively exploring interactive media through Unity and Blender.',
         location: 'Surakarta, Central Java',
         avatarUrl: profileImg,
