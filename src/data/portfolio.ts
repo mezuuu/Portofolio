@@ -8,7 +8,7 @@ import projectCVBuilder from '../assets/images/cv-builder.png';
 // import projectCVBuilder from '../assets/images/project-cv-builder.png';
 import projectPortfolio from '../assets/images/porto.png';
 import projectDoksli from '../assets/images/Doksli.png';
-import projectKaranganyarKab from '../assets/images/karanganyarKab.png';
+import projectKaranganyarKab from '../assets/images/KaranganyarKab.png';
 import projectAetheris from '../assets/images/Aetheris.jpeg';
 // import projectUnityGame from '../assets/images/project-unity-game.png';
 // import projectBlender from '../assets/images/project-blender.png';
