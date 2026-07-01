@@ -18,8 +18,8 @@ export default function Navbar() {
                 <div className="flex items-center justify-between flex-row-reverse py-3 md:py-4">
                     {/* Logo */}
                     <a href="/" className="flex items-center space-x-2">
-                        <img src={logoImg} alt="MezuuDev Logo" className="h-12 md:h-14 w-auto object-contain" />
-                        <span className="text-xl font-bold text-text-primary hidden sm:block">MezuuDev</span>
+                        <img src={logoImg} alt="MezuuDev Logo" className="h-8 md:h-10 w-auto object-contain" />
+                        <span className="text-lg font-bold text-text-primary hidden sm:block">MezuuDev</span>
                     </a>
 
                     {/* Desktop Navigation */}
